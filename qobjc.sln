@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qobjc", "qobjc\qobjc.vcproj", "{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tests", "tests\tests.vcproj", "{47828683-6854-46D9-88CC-EC5A21142EDA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3} = {2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}.Debug|Win32.Build.0 = Debug|Win32
+		{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}.Release|Win32.ActiveCfg = Release|Win32
+		{2C25EAF8-EC16-49BE-A77B-C3E4949F48B3}.Release|Win32.Build.0 = Release|Win32
+		{47828683-6854-46D9-88CC-EC5A21142EDA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{47828683-6854-46D9-88CC-EC5A21142EDA}.Debug|Win32.Build.0 = Debug|Win32
+		{47828683-6854-46D9-88CC-EC5A21142EDA}.Release|Win32.ActiveCfg = Release|Win32
+		{47828683-6854-46D9-88CC-EC5A21142EDA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

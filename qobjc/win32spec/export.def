@@ -1,0 +1,155 @@
+
+;    This file is part of the q-objc runtime library.
+;    Copyright (C) 2008-2009 Taras Tovchenko Victorovich <doctorset@gmail.com>
+;    
+;    This program is free software: you can redistribute it and/or modify
+;    it under the terms of the GNU General Public License as published by
+;    the Free Software Foundation, either version 3 of the License, or
+;    (at your option) any later version.
+;    
+;    This program is distributed in the hope that it will be useful,
+;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;    GNU General Public License for more details.
+;    
+;    You should have received a copy of the GNU General Public License
+;    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+LIBRARY	"qobjc"
+EXPORTS
+
+; qsend.h
+
+	q_send										@100	NONAME
+	q_sendFp									=		q_send
+	q_sendSt									@101	NONAME
+	q_sendSuper									@102	NONAME
+	q_sendFpSuper								=		q_sendSuper
+	q_sendStSuper								@103	NONAME
+	
+	q_lookupImp									@104	NONAME
+	q_lookupImpSuper							@105	NONAME
+	
+	
+; qhashtable.h
+
+	q_allocHashTable							@110	NONAME
+	q_addItemToHashTable						@111	NONAME
+	q_removeItemFromHashTable					@112	NONAME
+	q_itemFromHashTable							@113	NONAME
+	q_itemsCountInHashTable						@114	NONAME
+	q_initStateForHashTable						@115	NONAME
+	q_nextStateForHashTable						@116	NONAME
+	
+	
+; qarray.h
+
+	q_allocMethodList							@120	NONAME	
+	q_addItemToMethodList						@121	NONAME
+	q_itemAtIndexInMethodList					@122	NONAME
+	q_removeItemAtIndexInMethodList				@123	NONAME
+	q_itemsCountInMethodList					@124	NONAME
+	
+	q_allocMethodListArray						@125	NONAME	
+	q_addItemToMethodListArray					@126	NONAME
+	q_itemAtIndexInMethodListArray				@127	NONAME
+	q_removeItemAtIndexInMethodListArray		@128	NONAME
+	q_itemsCountInMethodListArray				@129	NONAME
+	
+	q_allocIvarArray							@130	NONAME	
+	q_addItemToIvarArray						@131	NONAME
+	q_itemAtIndexInIvarArray					@132	NONAME
+	q_removeItemAtIndexInIvarArray				@133	NONAME
+	q_itemsCountInIvarArray						@134	NONAME
+	
+	
+; qencoding.h
+
+	q_skipVarNameEncode							@140	NONAME
+	q_skipVarQualifiersEncode					@141	NONAME
+	q_skipTypeSpecEncode						@142	NONAME
+	q_sizeOfTypeEncode							@143	NONAME
+	q_alignOfTypeEncode							@144	NONAME
+	q_layoutStructBeginEncode					@145	NONAME
+	q_layoutStructNextEncode					@146	NONAME
+	q_layoutStructEndEncode						@147	NONAME
+	q_firstArgTypeOfMethodEncode				@148	NONAME
+	q_nextArgTypeOfMethodEncode					@149	NONAME
+	q_sizeOfMethodRetTypeEncode					@150	NONAME
+	q_sizeOfMethodAllArgTypesEncode				@151	NONAME
+	
+	
+; qclass.h
+
+	q_allocIvar									@160	NONAME
+	q_setValueToIvar							@161	NONAME
+	q_getValueFromIvar							@162	NONAME
+	q_allocMethod								@163	NONAME
+	q_allocClass								@164	NONAME
+	q_setMethodListArray						@165	NONAME
+	q_methodListArray							@166	NONAME
+	q_setIvarArray								@167	NONAME
+	q_ivarArray									@168	NONAME
+	q_sizeOfObject								@169	NONAME
+	q_registerClass								@170	NONAME
+	q_classByName								@171	NONAME
+	q_lookupIvarInIvarArray						@172	NONAME
+	q_lookupIvarInClassHierarchy				@173	NONAME
+	q_lookupMethodInMethodList					@174	NONAME
+	q_lookupMethodInMethodListArray				@175	NONAME
+	q_lookupMethodInClassHierarchy				@176	NONAME
+	q_addProtocolToClass						@177	NONAME
+	
+	
+; qerror.h
+
+	q_throwError								@190	NONAME
+	q_throwErrorWithObject						@191	NONAME
+	q_throwErrorWithObjectAndVAList				@192	NONAME
+	q_setErrorHandler							@193	NONAME
+	
+	
+; qmemory.h
+
+	q_allocZone									@200	NONAME
+	q_reallocZone								@201	NONAME
+	q_freeZone									@202	NONAME
+	q_finalizeMemoryModule						@203	NONAME
+	q_retainMemBlock							@204	NONAME
+	q_releaseMemBlock							@205	NONAME
+	q_currentMemBlock							@206	NONAME
+	q_addObjectToPool							@207	NONAME
+	q_allocAutoreleasePool						@208	NONAME
+	q_currentThreadPool							@209	NONAME
+	q_zeroMemory								@210	NONAME
+	
+	
+; qselector.h
+
+	q_allocSelector								@220	NONAME
+	q_registerSelector							@221	NONAME
+	q_selectorByName							@222	NONAME
+	q_nameBySelector							@223	NONAME
+	q_isMappedSelector							@224	NONAME
+	q_defineSelector							@225	NONAME
+	
+
+; qconnect.h
+
+	q_initializeEnvironment						@230	NONAME
+	q_finalizeEnvironment						@231	NONAME
+	
+	
+; qprotocol.h
+
+	q_allocMethodDescription					@240	NONAME
+	
+	
+; qloading.h
+	q_allocSymbolHandle							@250	NONAME
+	q_infoTableBySymbolType						@251	NONAME
+	q_infoCategoryArray							@252	NONAME
+	q_loadSymbolByType							@253	NONAME
+	q_addItemToLoadSymbolTable					@254	NONAME
+	q_addItemToLoadCategoryArray				@255	NONAME
